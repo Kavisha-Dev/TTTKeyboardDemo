@@ -1,24 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fHm-HT-ndE">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Test-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TTTKeyboardDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-7T-5UA" userLabel="Outer Scroll View">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMX-3I-iDg" userLabel="Outer View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbm-ei-oCh" userLabel="Card View">
+                                                <rect key="frame" x="0.0" y="237.5" width="375" height="148"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="84A-Pk-E4m">
+                                                        <rect key="frame" x="20" y="11.5" width="335" height="125"/>
+                                                        <subviews>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b0t-23-XE0" userLabel="Selected Content TextView">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="83"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <string key="text">This textview is going to contain three lines max. Say we are good.Afetr that we are going to show the dots and then we shall see what we see there and maybe we will be all good and nice and bold</string>
+                                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="124" translatesAutoresizingMaskIntoConstraints="NO" id="TZV-Mj-df5">
+                                                                <rect key="frame" x="0.0" y="91" width="335" height="34"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This is going be " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i9T-Rf-mfI">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="34"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="via Qwote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-nI-F7r">
+                                                                        <rect key="frame" x="259" y="0.0" width="76" height="34"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="mZ6-ao-Qsr"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="TZV-Mj-df5" secondAttribute="bottom" id="CqT-kT-ImT"/>
+                                                            <constraint firstAttribute="trailing" secondItem="TZV-Mj-df5" secondAttribute="trailing" id="VTa-so-inR"/>
+                                                            <constraint firstItem="TZV-Mj-df5" firstAttribute="leading" secondItem="84A-Pk-E4m" secondAttribute="leading" id="avL-t2-syg"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="148" id="1j7-FR-eUz"/>
+                                                    <constraint firstItem="84A-Pk-E4m" firstAttribute="centerX" secondItem="kbm-ei-oCh" secondAttribute="centerX" id="BTd-wa-NtJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="84A-Pk-E4m" secondAttribute="bottom" constant="11.5" id="Ds4-Rb-7gO"/>
+                                                    <constraint firstAttribute="width" constant="375" id="Yfj-GE-EO8"/>
+                                                    <constraint firstItem="84A-Pk-E4m" firstAttribute="leading" secondItem="kbm-ei-oCh" secondAttribute="leading" constant="20" id="d4a-rb-t3r"/>
+                                                    <constraint firstAttribute="trailing" secondItem="84A-Pk-E4m" secondAttribute="trailing" constant="20" id="qYN-Dv-mIF"/>
+                                                    <constraint firstItem="84A-Pk-E4m" firstAttribute="top" secondItem="kbm-ei-oCh" secondAttribute="top" constant="11.5" id="wUz-zl-sxs"/>
+                                                    <constraint firstItem="84A-Pk-E4m" firstAttribute="centerY" secondItem="kbm-ei-oCh" secondAttribute="centerY" id="xt5-zf-bwo"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxS-0N-Kq0">
+                                                <rect key="frame" x="311" y="212" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="JxS-0N-Kq0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sMX-3I-iDg" secondAttribute="leading" constant="20" symbolic="YES" id="Hoz-kg-7Os"/>
+                                            <constraint firstItem="kbm-ei-oCh" firstAttribute="centerY" secondItem="sMX-3I-iDg" secondAttribute="centerY" id="OyC-Du-Xs5"/>
+                                            <constraint firstItem="kbm-ei-oCh" firstAttribute="centerX" secondItem="sMX-3I-iDg" secondAttribute="centerX" id="W4w-cA-arr"/>
+                                            <constraint firstItem="kbm-ei-oCh" firstAttribute="leading" secondItem="sMX-3I-iDg" secondAttribute="leading" id="buk-dK-lIh"/>
+                                            <constraint firstItem="kbm-ei-oCh" firstAttribute="top" secondItem="JxS-0N-Kq0" secondAttribute="bottom" constant="5" id="nEd-WD-PE5"/>
+                                            <constraint firstAttribute="trailing" secondItem="JxS-0N-Kq0" secondAttribute="trailing" constant="22" id="sLF-uf-Xod"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="sMX-3I-iDg" firstAttribute="width" secondItem="vdg-7T-5UA" secondAttribute="width" id="3DI-pQ-fWv"/>
+                                    <constraint firstAttribute="trailing" secondItem="sMX-3I-iDg" secondAttribute="trailing" id="5kL-Rq-Uib"/>
+                                    <constraint firstItem="sMX-3I-iDg" firstAttribute="centerY" secondItem="vdg-7T-5UA" secondAttribute="centerY" priority="250" id="9PX-d7-I9P"/>
+                                    <constraint firstAttribute="bottom" secondItem="sMX-3I-iDg" secondAttribute="bottom" id="OR9-cS-PAe"/>
+                                    <constraint firstItem="sMX-3I-iDg" firstAttribute="leading" secondItem="vdg-7T-5UA" secondAttribute="leading" id="dKi-Qx-RAC"/>
+                                    <constraint firstItem="sMX-3I-iDg" firstAttribute="top" secondItem="vdg-7T-5UA" secondAttribute="top" id="rcb-T0-j2I"/>
+                                    <constraint firstItem="sMX-3I-iDg" firstAttribute="centerX" secondItem="vdg-7T-5UA" secondAttribute="centerX" id="uDi-iH-ei4"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vdg-7T-5UA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DYf-rQ-zBq"/>
+                            <constraint firstItem="vdg-7T-5UA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QhM-Qz-aAW"/>
+                            <constraint firstItem="vdg-7T-5UA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="etk-RS-KW2"/>
+                            <constraint firstItem="vdg-7T-5UA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gyT-kZ-qzP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Test" id="6fb-oN-shi"/>
+                    <connections>
+                        <outlet property="cardView" destination="kbm-ei-oCh" id="GBy-RA-awl"/>
+                        <outlet property="outerView" destination="sMX-3I-iDg" id="ib6-XV-pk6"/>
+                        <outlet property="scrollView" destination="vdg-7T-5UA" id="gXm-iA-Qjj"/>
+                        <outlet property="selectedContentTextView" destination="b0t-23-XE0" id="Xop-GS-JKx"/>
+                        <outlet property="urlTextField" destination="i9T-Rf-mfI" id="EzA-sy-Kys"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="109.29535232383809"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="045-f2-6cD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fHm-HT-ndE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iuj-jG-jRU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ckF-0y-oE6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUn-KY-nc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="109.29535232383809"/>
         </scene>
     </scenes>
 </document>
